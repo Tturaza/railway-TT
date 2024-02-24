@@ -1,0 +1,109 @@
+<div class="middle-div">
+
+  <div class="container">
+    <div class="speech-div">
+      <h1>Search & buy train tickets online</h1>
+      <h2>Wish you a happy journey</h2>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="middle-bottom-div">
+
+  <div class="container">
+
+    <div class="inset-div">
+
+      <h2> Book a Train Ticket</h2>
+
+      <div class="options-div">
+
+        <form action="" [formGroup]="directionObj" (ngSubmit)="onSubmit()">
+          <select formControlName="from">
+
+            <option value="">From</option>
+            
+            <option value="Batumi">Batumi</option>
+            <option value="Tbilisi">Tbilisi</option>
+            <option value="Poti">Poti</option>
+
+          </select>
+
+
+          <select  formControlName="to"> 
+
+            <option value="">To</option>
+            <option value="Tbilisi">Tbilisi</option>
+            <option value="Poti">Poti</option>
+            <option value="Batumi">Batumi</option>
+          
+          </select>
+
+          <input type="date" formControlName="date" >
+
+          <input type="number" placeholder="Number of passengers" formControlName="amount">
+
+
+          <button type="submit"  [disabled]="!directionObj.valid" (click)="convertToWeekday()">
+            Sumbit
+          </button>
+       
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="bottom-div">
+
+  <div class="container">
+    <div class="left-section">
+      <img src="assets/images/station.png">
+    </div>
+
+    <div class="right-section">
+
+      <div class="title">
+        <h1>Train tickets</h1>
+      </div>
+
+      <div class="about">
+        <p>You will need each to buy train tickets Passenger's personal number. Please prepare this information in
+          advance</p>
+      </div>
+
+      <div class="container-list">
+
+        <div class="box">
+          <img src="assets/images/offers.png" alt="">
+          <h4>Unlimited offers</h4>
+
+        </div>
+
+        <div class="box">
+          <img src="assets/images/safe.png" alt="">
+          <h4>100% Safe</h4>
+        </div>
+
+        <div class="box">
+          <img src="assets/images/support.png" alt="">
+          <h4>24/7 Support</h4>
+        </div>
+
+        <div class="box">
+          <img src="assets/images/pay.png" alt="">
+          <h4>100% Secure payment</h4>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,145 @@
+<section id="firstSection" class="first-section" >
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-12 col-xl-12 col-lg-12" >
+                <div class="payment-list-box">
+                    <div class="successful-header" >
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                              </svg>
+                        </div>
+                        <h3>Payment Successful</h3>
+                    </div>
+                    <div class="successful-body">
+                        <div class="inside-fist-body">
+                            <div class="in-inside-list-box">
+                                <div class="first-box">
+                                    <div class="whole-details">
+                                        <div class="logos-div">
+                                            <div class="first-logo-div">
+                                                <small>Turo Railway</small>
+                                            </div>
+                                            <div class="seconde-logo-div">
+                                                <div style="line-height: 1em;">
+                                                    <img src="assets/images/person.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ticket-info">
+                                            <div style="display: flex;">
+                                                <span style="color: red; font-weight: bold; font-size: 15px;">You must save Ticket's id.</span>
+                                                <p class="ticket-number">Ticket id: <span>{{uniqueId}}</span> </p>
+                                                <p>Release Date: <span>{{dayOfToday | date:"MM/dd/YYYY"}}</span> </p>
+                                            </div>
+                                        </div>
+                                        <div class="travel-info">
+                                            <div class="departure">
+                                                Departure:
+                                                <br>
+                                                <span>{{storeData?.from}} - at  {{storeData?.depactureTime}}</span>
+                                 
+                                            </div>
+                                            <div class="arrive">
+                                                Arrive:
+                                                <br>
+                                                <span>{{storeData?.to}} - at  {{storeData?.arriveTime}}</span>
+                                            </div>
+                                            <div class="time">
+                                                Expiration Date:
+                                                <br>
+                                                <span>{{storeData?.day}} - {{storeData?.date}}</span>
+                                            </div>
+                                        </div>
+                                        <small>Contact Information: </small>
+                                        <div class="email-mobile-info">
+                                            <div class="child-email-mobile-info">
+                                                <div class="email-div">
+                                                    <p>Email:<span>{{storeData?.email}}</span></p>
+                                                </div>
+                                                <div class="mobile-div">
+                                                    <p>Mobile N: <span> {{storeData?.mobileN}} </span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <p>Passengers</p>
+
+                                        <div *ngFor="let ragac of storeData.passengers; let i = index ">
+
+                                            <div class="inputs-container-flex">
+                                            
+                                                <div class="firstname-parent-div">
+                                                    <div>
+                                                        <small>Firstname</small>
+                                                        <p>{{ragac.name}}</p>
+                                                      </div>
+                                                </div>
+                                                
+                                                <div class="lastname-parent-div">
+                                                    <div>
+                                                        <small>Lastname</small>
+                                                        <p>{{ragac.surname}}</p>
+                                                    </div>
+                                                </div>
+                                                    
+                                                <div class="personalnumber-parent-div">
+                                                    <div>
+                                                        <small>Personal N.</small>
+                                                        <p>{{ragac.idNumber}}</p>
+                                                    </div>
+                                                </div> 
+
+                                                <div class="classtrain-parent-div">
+                                                    <div>
+                                                        <small>Place</small>
+                                                        <p>{{ragac.placeP}}</p>
+                                                    </div>
+                                                </div> 
+
+                                                <div class="place-parent-div" >
+                                                    <div>
+                                                        <small>Train class</small>
+                                                        <p>{{classFromNumberArray[i]}}</p>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="payment-details-info">
+                                                <div class="left-box">
+                                                    <small style="font-weight: 900;">Payment Info:</small>
+                                                    <div>
+                                                        <p class=cardHolder-p>{{storeData?.cardHolder}}</p>
+                                                        <p class="cardNumber-p">Credit Card-{{storeData.cardNumber| myPipe}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="right-box">
+                                                    <div class="border-div"></div>
+                                                    <div class="fullPrice-div-info">
+                                                        <span>Paid In Full</span>
+                                                        <p>{{storeData?.fullPrice}}$</p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                           
+                                </div>
+                                <div class="seconde-box">
+                                    <button styleSheetFile="/final-ticket.component.scss" class="print-btn" printSectionId="firstSection" ngxPrint>
+                                        <span class="print-span">
+                                            <img src="assets/images/icons8-print-48.png" alt="">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+

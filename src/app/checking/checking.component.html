@@ -1,0 +1,30 @@
+<div style="background-color: whitesmoke; min-height: 100vh;" class="contain-fluid mt-4 p-5">
+    
+    <div>
+        <h1 class="search-h1">Search Ticket With Your Tickect's ID</h1>
+    </div>
+
+    <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+
+        <div  class="row search-whole-box">
+            <div class="mb-3 col-lg-10">
+                <input type="text" class="form-control" formControlName="yourId" placeholder="Search Ticket With Your Tickect's id">
+            </div>
+
+            <div class="mb-3 col-lg-2">
+                <button  class="btn btn-md">Search</button>
+            </div>
+
+        </div>
+    </form>
+
+    <div style="text-align: center;">
+           <button (click)="deleteT()" class="btn" [ngClass]="isAlive ? 'btn-d' : 'none' " >Delete Ticket</button> 
+    </div>
+
+
+    <div [ngClass]="isAlive ? 'block' : 'none' ">
+        <app-final-ticket></app-final-ticket>
+    </div>
+</div>
+

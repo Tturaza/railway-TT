@@ -1,0 +1,110 @@
+<div class="train-section">
+    <div class="container">
+        <div class="h5-div">
+            <h5>Choose your preferred train</h5>
+        </div>
+    </div>
+</div>
+
+<div class="direction-section">
+    <div class="container">
+        <div>
+            <div >
+                <h3 style="font-weight: bold;" *ngIf="this.life">List of trains</h3>
+            </div>
+
+            <div class="table-div" >
+                
+                <table class="table">
+                    <thead>
+                        <tr class="first-tr">
+                            <th>Train name</th>
+                            <th>Departure</th>
+                            <th>Arrive</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody >
+                        <tr id="1" class="seconde-tr">
+
+                            <td class="tbody-top">
+                                <p>#{{randomNumbers[1]}}<p>
+                                <p>{{storeData.name}} Express</p>
+                            </td>
+                            <td class="tbody-top">
+                                <p>13:25</p>
+                                <p>{{storeData.from}}</p>
+                            </td>
+
+                            <td class="tbody-top">
+                                <p>18:45</p>
+                                <p>{{storeData?.to}}</p>
+
+                            </td>
+
+                            <td class="tbody-top">
+                                <button class="btn-td" (click)="moveOnById1()">Review and Pay</button>
+                            </td>
+                        </tr>
+
+                        <tr id="2" class="seconde-tr">
+
+                            <td class="tbody-top">
+                                <p>#{{randomNumbers[2]}}<p>
+                                <p>{{storeData.name}} Express</p>
+                            </td>
+                            <td class="tbody-top">
+                                <p>22:15</p>
+                                <p>{{storeData.from}}</p>
+                            </td>
+
+                            <td class="tbody-top">
+                                <p>04:30</p>
+                                <p>{{storeData?.to}}</p>
+
+                            </td>
+
+                            <td class="tbody-top">
+                                <button class="btn-td" (click)="moveOnById2()">Review and Pay</button>
+                            </td>
+                        </tr>
+
+                        <tr id="3" class="seconde-tr">
+
+                            <td class="tbody-top">
+                                <p>#{{randomNumbers[0]}}<p>
+                                <p>{{storeData.name}} Express</p>
+                            </td>
+                            <td class="tbody-top">
+                                <p>06:30</p>
+                                <p>{{storeData.from}}</p>
+                            </td>
+
+                            <td class="tbody-top">
+                                <p>12:40</p>
+                                <p>{{storeData?.to}}</p>
+
+                            </td>
+
+                            <td class="tbody-top" >
+                                <button class="btn-td" (click)="moveOnById3()">Review and Pay</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+
+            <div class="not-visible"  *ngIf="!this.life">
+                <h1>მატარებელი არ მოიძებნა</h1>
+                <button routerLink="/">დაბრუნდი უკან</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

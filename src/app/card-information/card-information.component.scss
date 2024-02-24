@@ -1,0 +1,171 @@
+div{
+    line-height: 1.5em;
+}
+
+.first-section{
+    padding: 90px 0 90px;
+    background:#2840BF ;
+
+    .container{
+        width: 100%;
+        max-width: 1320px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+
+        .title-div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .title{
+                margin-right: 20px;
+                line-height: 1.2;
+                font-family: 700;
+                font-size: 3.5rem;
+                color: #FFFFFF;
+                margin-bottom: 0.5rem;
+                margin: 0 0 20px;
+            }
+        }
+        
+    }
+}
+
+
+.payment-section{
+    padding-top: 60px;
+    padding-bottom: 120px;
+    
+    .container{
+        width: 100%;
+        max-width: 1320px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+
+        .form{
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            .form-first-div{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-left: -0.75rem;
+                margin-right: -075rem;
+                margin-top: 0px;
+                width: 100%;
+                flex: 0 0 auto;
+
+                .inside-first-div{
+                    flex: 0 0 auto;
+                    width: 100%;
+                    max-width: 100%;
+                    padding-right: 0.75rem;
+                    padding-left: 0.75rem;
+
+                    .inside-list-div{
+                        box-shadow: none;
+                        background: linear-gradient(90deg, rgba(41, 66, 203, 0.05) 0%, rgba(39, 61, 177, 0.05) 100%);
+                        border-radius: 10px;
+                        padding: 30px 30px;
+
+                        .first-list-div{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 30px;
+                            flex-wrap: wrap;
+                            color:#3F3F3F;
+                        }
+
+                        .therd-list-div{
+                            text-align: center;
+                            margin-top: 1.5rem;
+
+                            button{
+                                cursor: pointer;
+                                border-radius: 5px;
+                                padding: 12px 20px 12px;
+                                font-weight: 700;
+                                font-size: 1.125rem;
+                                color: #FFFFFF;
+                                background-color: #3498db;
+                                transition:  0.3s ease-in-out;
+                                border: none;
+                
+                                &:hover {
+                                    background-color : darken(#3498db, 10%);
+                                  }
+                                
+                                  &:focus {
+                                    outline: none;
+                                  }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        
+        .seconde-list-first-box{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left:  -0.5rem;
+            margin-right:  -0.5rem;
+            margin-top: -1rem;
+
+      
+            .col-lg-12{
+                max-width: 100%;
+                width: 100%;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+                margin-top: 1rem;
+              
+            }
+            
+            .col-lg-6{
+                width: 50%;
+                max-width: 100%;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+                margin-top: 1rem;
+            }
+       
+        }
+    }
+}
+
+
+
+
+.span{                      
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #3F3F3F;
+}
+
+
+label{
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: "Lato", sans-serif;
+}
+input{
+    width: 100%;
+    background-color: #FAFAFE;
+    color: #3F3F3F;
+    border-radius: 5px;
+    border: 1px solid #D5DAF0;
+    padding: 14px 10px 14px;
+    outline: none;
+
+}

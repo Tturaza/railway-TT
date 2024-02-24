@@ -1,0 +1,192 @@
+<div class="train-section">
+    <div class="container">
+        <div class="h6-div">
+            <h6>მგზარების მონაცემები</h6>
+        </div>
+
+    </div>
+</div>
+
+<section class="book-section">
+
+    <div class="book-container">
+
+        <div class="whole-box">
+
+            <div class="left-box">
+
+                <div class="inside-top-left">
+                    <h6>შეიყვანეთ თქვენი მონაცემები</h6>
+
+                    <div class="ticket-div-top">
+                        <div style="border-bottom: 2px dashed #D5DAF0;padding-bottom: 10px;">
+                            <div style="justify-content: center; width: 100%; display: flex;">
+                                <div style="width: 100%;">
+                                    <ul>
+                                        <li>
+                                            <span>#{{storeData.trainNumber}}</span>
+                                            <span>{{storeData.name}} Express</span>
+                                        </li>
+                                       
+                                        <li class="from-span">
+                                            <span>{{storeData.depactureTime}}</span>
+                                            <span>{{storeData.from}}</span>
+                                        </li>
+            
+                                        <li class="from-span">
+                                            <span>{{storeData.arriveTime}}</span>
+                                            <span>{{storeData.to}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-div-middle">
+                        <div>
+                            <div class="form-div">
+                                <h5>Contact Information</h5>
+                                <form [formGroup]="newMyFormObj" (ngSubmit)="onSubmit()">
+
+                                    <div class="email-mobile-container">
+                                        <div class="big-inputs-div">
+                                            <div>
+                                                <input placeholder="Email" type="email" formControlName="email">
+                                            </div>
+                                         
+                                        </div>
+                                      
+                                        <div class="big-inputs-div">
+                                          <div>
+                                            <input id="mobileN" placeholder="Mobile Number" type="text" formControlName="mobileN">
+                                          </div>
+                                          
+                                        </div>
+                                    </div>
+                                   
+                                  
+                                    <div formArrayName="passengers" class="form-array-name">
+
+                                        <div class="">
+                                            <h5>Passengers Information</h5>
+                                        </div>
+
+                                      <div *ngFor="let passenger of passengerForms.controls; let i = index" [formGroupName]="i">
+                                        
+                                        <div>
+                                            <p>Pessenger {{ i + 1 }}<p>
+                                        </div>
+                                        
+                                        <div class="inputs-container-flex">
+                                            
+                                            <div class="name-parent-div">
+                                                <div>
+                                                    <input id="passengerName" type="text" placeholder="Firstname" formControlName="name">
+                                                  </div>
+                                            </div>
+                                            
+                                            <div class="lastname-parent-div">
+                                                <div>
+                                                    <input id="passengerAge" type="text" placeholder="Lastname" formControlName="surname">
+                                                </div>
+                                            </div>
+                                                
+                                            <div class="pnumber-parent-div">
+                                                <div>
+                                                    <input type="number" placeholder="Personal number" formControlName="idNumber">
+                                                </div>
+        
+                                            </div> 
+
+                                             
+                                                <div>
+                                                    <select formControlName="classT" >
+                                                        <option value="">Train Class</option>
+                                                        <option value="150">I Class 150ლ</option>
+                                                        <option value="100">II Class 100ლ</option>
+                                                        <option value="50">III Class 50ლ</option>
+                                                    </select>
+                                                  </div>
+                                              
+
+                                           
+                                            <div>
+                                                <select formControlName="placeP">
+                                                    <option value="">Place in train</option>
+                                                    <option value="A1">A1</option>
+                                                    <option value="A2">A2</option>
+                                                    <option value="A3">A3</option>
+                                                    <option value="A4">A4</option>
+                                                    <option value="A5">A5</option>
+                                                    <option value="B1">B1</option>
+                                                    <option value="B2">B2</option>
+                                                    <option value="B3">B3</option>
+                                                    <option value="B4">B4</option>
+                                                    <option value="B5">B5</option>
+                                                </select>
+                                              </div>
+                                          
+                                        
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="btn-div">
+                                        <button type="submit" [disabled]="!newMyFormObj.valid" >Submit</button>
+                                    </div>
+                              
+                                 
+                                </form>
+
+                            </div>
+                        </div>      
+                    </div>
+    
+                </div>
+
+            </div>
+            
+
+            <div class="right-box">
+                <div class="invoise-container">
+                    <h5>ინვოისი</h5>
+
+                    <div class="place-price-div">
+
+                        <div class="place-div">
+                           <small class="place-small-tag">Place</small> 
+                           <ng-container *ngFor="let passenger of storeData.passengers;let i = index">
+                             <small *ngIf="allowed">{{passenger.placeP}} </small>
+                           </ng-container>
+                        </div>
+
+                        <div class="price-div">
+                           <small>Price $</small> 
+                           <ng-container *ngFor="let passenger of storeData.passengers; let i = index">
+                                <small *ngIf="allowed">{{passenger.classT + "$"}}</small>
+                           </ng-container>
+                        </div>
+
+                    </div>
+
+                    <div class="full-price">
+                      <div class="calculate-full-price">
+                        <small>Total Price</small>   
+                        <small style="padding-left: 1px;">{{ totalPrice() + "$"}}</small>
+                      </div>
+
+                    </div>
+
+                    <div class="book-btn-div">
+                        <button *ngIf="allowed" (click)="registerTickect()">Ticket Registration</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
