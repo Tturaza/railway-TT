@@ -41,8 +41,9 @@
           
           </select>
 
-          <input type="date" formControlName="date" >
-
+        
+          <input type="date"  [matDatepicker]="picker" [min]="minDate" formControlName="date">
+          
           <input type="number" placeholder="Number of passengers" formControlName="amount">
 
 

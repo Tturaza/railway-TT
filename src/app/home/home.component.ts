@@ -1,5 +1,6 @@
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
+import { MatDatepickerControl, MatDatepickerPanel } from '@angular/material/datepicker';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnChanges{
 
+  minDate  = new Date()
+  picker!: MatDatepickerPanel<MatDatepickerControl<any>,any,any>;
 
   constructor(private fb :FormBuilder , private router : Router){}
 

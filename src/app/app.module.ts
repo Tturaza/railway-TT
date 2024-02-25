@@ -15,6 +15,12 @@ import { MyPipePipe } from './my-pipe.pipe';
 import {NgxPrintModule} from 'ngx-print'
 import { BookTicketComponent } from './book-ticket/book-ticket.component';
 import { CheckingComponent } from './checking/checking.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+   
 
 @NgModule({
   declarations: [
@@ -38,7 +44,12 @@ import { CheckingComponent } from './checking/checking.component';
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
-    NgxPrintModule
+    NgxPrintModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
