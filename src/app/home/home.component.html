@@ -21,10 +21,10 @@
       <div class="options-div">
 
         <form action="" [formGroup]="directionObj" (ngSubmit)="onSubmit()">
-          <select formControlName="from">
-
+         
+          <select formControlName="from" >
+         
             <option value="">From</option>
-            
             <option value="Batumi">Batumi</option>
             <option value="Tbilisi">Tbilisi</option>
             <option value="Poti">Poti</option>
@@ -32,13 +32,9 @@
           </select>
 
 
-          <select  formControlName="to"> 
-
+          <select  formControlName="to" (ngModelChange)="validationToFrom()"> 
             <option value="">To</option>
-            <option value="Tbilisi">Tbilisi</option>
-            <option value="Poti">Poti</option>
-            <option value="Batumi">Batumi</option>
-          
+            <option *ngFor="let option of ['Tbilisi', 'Poti', 'Batumi']" [value]="option">{{ option }}</option>
           </select>
 
         
@@ -47,19 +43,18 @@
           <input type="number" placeholder="Number of passengers" formControlName="amount">
 
 
-          <button type="submit"  [disabled]="!directionObj.valid" (click)="convertToWeekday()">
+          <button type="submit" id="submitB" [disabled]="!directionObj.valid" (click)="convertToWeekday()">
             Sumbit
           </button>
        
         </form>
-
+     
       </div>
 
     </div>
 
   </div>
 </div>
-
 
 <div class="bottom-div">
 
