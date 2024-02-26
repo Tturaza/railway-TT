@@ -9,18 +9,41 @@ footer{
 
 }
 
+.footer-p{
+    transition:  0.3s ease-in-out;
+}
+
 @media screen and (min-width : 375px) and (max-width:555px){
     footer{
         padding: 0px;
         padding-left: 20px;
         padding-right: 20px;
 
-
         .footer-p{
             
             font-size: 18px;
         }
-    
+    }    
+}
+
+@media screen and (min-width:555px) and (max-width: 750px) {
+    footer{
+        padding: 0px 23px 0px 23px;
     }
-    
+
+    .footer-p{
+        font-size: 21px;
+    }
+
+}
+
+@media screen and (min-width:750px) and (max-width: 991px) {
+    footer{
+        padding: 0px 35px 0px 35px;
+    }
+
+    .footer-p{
+        font-size: 23px;
+    }
+
 }
