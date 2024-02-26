@@ -25,6 +25,7 @@
       display: flex;
       flex-direction: column;
       row-gap: 10px;
+      transition: 0.3s ease-in-out;
     }
 
 
@@ -77,6 +78,7 @@
       padding-bottom: 25px;
       text-align: center;
       font-size: 21px;
+      transition: 0.3s ease-in-out;
 
     }
   }
@@ -215,7 +217,7 @@
 }
 
 
-@media screen and (min-width : 375px) and (max-width:550px) {
+@media screen and (min-width : 375px) and (max-width:555px) {
   
   .middle-div{
     height: 425px;
@@ -308,6 +310,120 @@
             display: grid;
             margin-top: 15px;
             grid-template-columns: repeat(2 , 1fr);
+
+            .box{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              height: auto;
+              width: auto;
+              text-align: center;
+            }
+          }
+        }
+      }
+    } 
+}
+
+@media screen and (min-width:555px) and (max-width: 700px) {
+
+  .middle-div{
+   height: 490px;
+    .container{
+      padding: 0;
+      padding-right: 23px;
+      padding-left: 23px;
+    
+
+      .speech-div{
+        row-gap: 0;
+        margin-top: 65px;
+        
+        h1{
+         
+        }
+
+        h2{
+       
+        }
+      }
+    }
+
+  }
+
+  .middle-bottom-div{
+
+    .container{
+      padding-left: 23px;
+      padding-right: 23px;
+      min-width: 555px;
+      max-width: 700px;
+
+    }
+
+    .inset-div{
+    
+      padding: 0px;
+      padding-top: 20px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+  
+
+      .book-train-h2{
+        margin: 0;
+      }
+    }
+
+    form{
+      display: grid;
+      grid-template-columns: repeat(2 , 1fr);
+      row-gap: 20px;
+      column-gap: 18px;
+  
+
+            
+        select{
+          width: 100%;
+          margin-left: 0;
+        }
+
+        input{
+          width: 100%;
+          margin-left: 0;
+        }
+
+        button{
+          width: 55%;
+        }
+    }
+  }
+
+    .bottom-div{
+      padding: 90px 23px 70px 23px;
+
+      
+
+
+      .container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        height: auto;
+
+        .right-section{
+          margin-top: 21px;
+
+          .title,
+          .about{
+            text-align: center;
+          }
+
+          .container-list{
+            display: grid;
+            margin-top: 15px;
+            grid-template-columns: repeat(2 , 1fr);
+
 
             .box{
               display: flex;
