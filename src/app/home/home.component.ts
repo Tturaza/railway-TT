@@ -54,11 +54,9 @@ export class HomeComponent implements OnInit{
 
       const storedDataString = localStorage.getItem('myForm');
       const storedData = storedDataString ? JSON.parse(storedDataString) : {};
-    
-
+  
       const mergedData = { ...storedData, ...myForm };
     
-
       localStorage.setItem('myForm', JSON.stringify(mergedData));
     
       this.router.navigate(['/trains']);
