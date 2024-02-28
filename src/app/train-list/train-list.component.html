@@ -10,7 +10,7 @@
     <div class="container">
         <div>
             <div >
-                <h3 style="font-weight: bold;" *ngIf="this.life">List of trains</h3>
+                <h3 *ngIf="this.life">List of trains</h3>
             </div>
 
             <div class="table-div" >
@@ -37,7 +37,7 @@
                                 <p>{{storeData.from}}</p>
                             </td>
 
-                            <td class="tbody-top">
+                            <td class="tbody-top arrive-p">
                                 <p>18:45</p>
                                 <p>{{storeData?.to}}</p>
 
@@ -59,7 +59,7 @@
                                 <p>{{storeData.from}}</p>
                             </td>
 
-                            <td class="tbody-top">
+                            <td class="tbody-top arrive-p ">
                                 <p>04:30</p>
                                 <p>{{storeData?.to}}</p>
 
@@ -81,13 +81,13 @@
                                 <p>{{storeData.from}}</p>
                             </td>
 
-                            <td class="tbody-top">
+                            <td class="tbody-top arrive-p">
                                 <p>12:40</p>
                                 <p>{{storeData?.to}}</p>
 
                             </td>
 
-                            <td class="tbody-top" >
+                            <td class="tbody-top btn-tbody" >
                                 <button class="btn-td" (click)="moveOnById3()">Review and Pay</button>
                             </td>
                         </tr>

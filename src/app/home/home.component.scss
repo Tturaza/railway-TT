@@ -416,15 +416,13 @@
     } 
 }
 
-@media screen and (min-width:750px) and (max-width: 991px) {
+@media screen and (min-width:750px) and (max-width: 992px) {
 
   .middle-div{
    height: 520px;
 
     .container{
-      padding: 0;
-      padding-right: 35px;
-      padding-left: 35px;
+      padding: 0px 35px;
 
       .speech-div{
         row-gap: 0;
