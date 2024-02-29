@@ -45,9 +45,10 @@
                         <div>
                             <div class="form-div">
                                 <h5>Contact Information</h5>
-                                <form [formGroup]="newMyFormObj" (ngSubmit)="onSubmit()">
+                                <form  [formGroup]="newMyFormObj" (ngSubmit)="onSubmit()">
 
                                     <div class="email-mobile-container">
+
                                         <div class="big-inputs-div">
                                             <div>
                                                 <input placeholder="Email" type="email" formControlName="email">
@@ -61,6 +62,7 @@
                                           </div>
                                           
                                         </div>
+
                                     </div>
                                    
                                   
@@ -73,7 +75,7 @@
                                       <div *ngFor="let passenger of passengerForms.controls; let i = index" [formGroupName]="i">
                                         
                                         <div>
-                                            <p>Pessenger {{ i + 1 }}<p>
+                                            <p class="passenger-index">Pessenger {{ i + 1 }}<p>
                                         </div>
                                         
                                         <div class="inputs-container-flex">
@@ -98,7 +100,7 @@
                                             </div> 
 
                                              
-                                                <div>
+                                                <div class="select-div">
                                                     <select formControlName="classT" >
                                                         <option value="">Train Class</option>
                                                         <option value="150">I Class 150ლ</option>
@@ -109,7 +111,7 @@
                                               
 
                                            
-                                            <div>
+                                            <div class="select-div">
                                                 <select formControlName="placeP">
                                                     <option value="">Place in train</option>
                                                     <option value="A1">A1</option>

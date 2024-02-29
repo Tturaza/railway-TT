@@ -231,16 +231,7 @@ li{
         margin: 0 0 20px;
     }
     
-    .email-mobile-container{
-        display: flex;
-        width: 100%;
-        max-width: 100%;
-        margin-top: 1rem;
-        margin-bottom: 2.3rem;
-
-        :first-child{
-            margin-right: 17px;
-        }
+ 
     .big-inputs-div{
         flex: 0 0 auto;
         width: 49%;
@@ -261,10 +252,10 @@ li{
         }
     }
 
-    
-}
-}
-}
+    } 
+  }
+
+
 
 
 .inputs-container-flex{
@@ -308,15 +299,13 @@ li{
 
 .form-array-name{
     margin-bottom: 23px;
-
+    
     p{
         padding-left: 0.5rem;
         font-size: 17px;
         font-weight: 600;
         margin-top: 15px;
-    }
-
-   
+    }  
 }
 
 
@@ -383,8 +372,6 @@ li{
             align-items: center;
             justify-content: space-between;
             
-          
-
             .price-div,
             .place-div{
                 padding-top: 12px;
@@ -426,7 +413,6 @@ li{
 
         }
 
-
         .calculate-full-price{
             border-radius: 2px;
             padding: 11px 18px;
@@ -443,4 +429,306 @@ li{
             }
         }
     }
+
+    
+}
+
+.email-mobile-container{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2.3rem;
+
+    :first-child{
+        margin-right: 17px;
+    }
+}
+
+@media screen and (min-width : 375px) and (max-width:750px){
+
+    .train-section{
+        .container{
+            padding: 40px 30px 67px 30px;
+
+            .h6-div{
+                padding: 0;
+                 h6{
+                    font-size: 14px;
+                    font-weight: 600;
+                 }
+            }
+        }
+    }
+
+    .book-section{
+        padding:60px 0px 90px 0px;
+   
+        .book-container{
+            padding: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .whole-box{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+        
+                .left-box{
+                    padding: 0;
+                    width: 100%;
+                   
+                   
+                    .inside-top-left{
+                        padding: 35px 15px 40px;
+
+                        .ticket-div-top{
+                            font-size: 11px;
+
+                            .from-span::before{
+                                left:-21px;
+                            }
+                        }
+
+                        .info-div-middle{
+
+                            .form-div{
+                                h5{
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                }
+
+                                .form-array-name{
+
+                                    .passenger-index{
+                                        font-size: 14px;
+                                    }
+
+                                    .inputs-container-flex{
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                        row-gap: 3px;
+
+                                        .name-parent-div,
+                                        .lastname-parent-div,
+                                        .pnumber-parent-div{
+                                            width: 100%;
+                                            input{
+                                                padding: 10px 30px 10px 15px;
+                                            }
+                                        }
+
+                                        .select-div{
+                                            width: 100%;
+                                            select{
+                                                width: 100%;
+                                                padding: 12px 30px 12px 12px;
+                                                font-size: 14px;
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right-box{
+                    width: 100%;
+                }
+            }
+        
+        }
+   
+    }
+    .email-mobile-container{
+        display: grid;
+        row-gap: 10px;
+
+        .big-inputs-div{
+            width: 100%;
+            margin: 0;
+        }
+
+    }
+
+}
+
+@media screen and (min-width : 750px) and (max-width: 1000px){
+    .train-section{
+        .container{
+             padding: 50px 25px 105px 25px;
+
+            .h6-div{
+                padding: 0;
+                 h6{
+                     font-size: 18px;
+                     font-weight: 600;
+                 }
+            }
+        }
+    }
+
+    .book-section{
+         padding:60px 0px 100px 0px;
+   
+        .book-container{
+             padding: 0;
+             padding-left: 25px;
+             padding-right: 25px;
+
+            .whole-box{
+               padding: 0;
+               margin: 0;
+        
+                .left-box{
+                     padding-left: 0;
+                    padding-right: 1rem;
+                     width: 70%;
+     
+                    .inside-top-left{
+                         padding: 35px 16px 40px;
+
+                        .info-div-middle{
+
+                            .form-div{
+                                h5{
+                                     font-size: 18px;
+                                     font-weight: 700;
+                                }
+
+                                .form-array-name{
+
+                                    .passenger-index{
+                                         font-size: 15px;
+                                        font-weight: 500;
+                                    }
+
+                                    .inputs-container-flex{
+                                        justify-content: center;
+                                        row-gap: 8px;
+                                        flex-wrap: wrap-reverse;
+
+                                        .name-parent-div,
+                                        .lastname-parent-div,
+                                        .pnumber-parent-div{
+                                             width: 32.2%;
+                                             margin-right: 4px;
+                                            input{
+                                                padding: 13px 3px 13px 8px;
+                                            }
+                                        }
+
+                                        .select-div{
+                                             width: 42%;
+                                            margin-right: 13px;
+                                            select{
+                                                 width: 100%;
+                                                 padding: 14px 0px;
+                                                 font-size: 14px;
+                                                 padding-left: 8px;
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right-box{
+                     width: 30%;
+                    padding: 0;
+                    margin-top: 13.5rem;
+                    .invoise-container{
+                        padding: 15px;
+                    }
+                }
+            }
+        
+        }
+   
+    }
+    .email-mobile-container{
+        .big-inputs-div{
+             width: 49%;
+            margin-right: 8px;
+        }
+
+    }
+}
+
+@media screen  and (min-width: 1000px) and (max-width:1230px){
+   
+    .book-section{
+        padding-bottom: 85px;
+        .book-container{
+            padding: 0;
+            padding-left: 20px;
+            padding-right: 20px; 
+    
+            .whole-box{
+               margin: 0;
+    
+               .left-box{
+                padding: 0;
+                padding-top: 1.5rem;
+    
+                
+                .inside-top-left{
+                     padding: 35px 20px 40px;
+    
+                   .info-div-middle{
+    
+                       .form-div{
+                        
+                           .form-array-name{
+    
+                               .inputs-container-flex{
+    
+                                   .name-parent-div,
+                                   .lastname-parent-div,
+                                   .pnumber-parent-div{
+                                         width: 21%;
+                                        
+                                       input{
+                                         padding: 16px 21px 16px 9px;
+                                       }
+                                   }
+    
+                                   .select-div{
+                                       select{
+                                             width: 100%;
+                                             font-size: 15px;
+                                            font-weight: 400;
+                                            padding: 16.7px 7px;
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+    
+    
+               }
+    
+               .right-box{
+                padding-right: 0;
+               }
+            }
+        }
+       
+        .email-mobile-container{
+            .big-inputs-div{
+                
+                margin-right: 13px;
+            }
+    
+        }
+    }
+   
 }
