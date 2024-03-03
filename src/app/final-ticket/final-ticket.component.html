@@ -27,7 +27,7 @@
                                             </div>
                                         </div>
                                         <div class="ticket-info">
-                                            <div style="display: flex;">
+                                            <div class="flex-column-description-div">
                                                 <span style="color: red; font-weight: bold; font-size: 15px;">You must save Ticket's id.</span>
                                                 <p class="ticket-number">Ticket id: <span>{{uniqueId}}</span> </p>
                                                 <p>Release Date: <span>{{dayOfToday | date:"MM/dd/YYYY"}}</span> </p>
@@ -51,7 +51,7 @@
                                                 <span>{{storeData?.day}} - {{storeData?.date | date : 'MM/dd/YYYY'}}</span>
                                             </div>
                                         </div>
-                                        <small>Contact Information: </small>
+                                        <small class="contact-title-small">Contact Information: </small>
                                         <div class="email-mobile-info">
                                             <div class="child-email-mobile-info">
                                                 <div class="email-div">
@@ -63,7 +63,7 @@
                                             </div>
                                         </div>
                                         
-                                        <p>Passengers</p>
+                                        <p class="passengers-title-p">Passengers</p>
 
                                         <div *ngFor="let ragac of storeData.passengers; let i = index ">
 

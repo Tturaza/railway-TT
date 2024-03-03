@@ -5,6 +5,7 @@ div{
 .first-section{
     padding-top: 150px;
     padding-bottom: 60px;
+    background-color: #f5f5f58a;
     
     .container{
         max-width: 1320px;
@@ -103,6 +104,10 @@ div{
                                     align-items: center;
                                     justify-content: space-between;
                                     margin-bottom: 15px;
+
+                                    .flex-column-description-div{
+                                        display: flex;
+                                    }
                                     
                                     p{
                                         font-size: 1rem;
@@ -298,4 +303,190 @@ svg{
 span{
     color: #111;
     font-weight: bolder;
+}
+
+@media screen and (min-width:375px) and (max-width:555px) {
+    
+.first-section{
+    padding-top: 140px;
+
+    .container{
+        padding: 0 30px;
+        
+
+        .payment-list-box{
+            padding: 20px 5px 5px;
+
+            .successful-header{
+                
+
+
+                .icon{
+                    width: 35px;
+                    height: 35px;
+                  
+                }
+
+                h3{
+                    font-size: 15px;
+                }
+            }
+            
+            .successful-body{
+                padding: 12px 10px;
+                .inside-fist-body{
+                    margin-top: 20px;
+                    padding: 0px 5px;
+                    .in-inside-list-box{
+                        
+
+                        .first-box{
+                           padding: 15px 10px;
+
+                            .whole-details{
+                                
+
+                                .logos-div{
+                               
+
+                                    .first-logo-div{
+                                        small{
+                                          font-weight: bold;
+                                          font-size: 13px;
+                                        }
+                                    }
+                                
+                                    .seconde-logo-div{
+                                       
+
+                                        img{
+                                          max-width: 35px;
+                                        }
+                                    }
+                                }
+                                
+                                .ticket-info{
+                                    .flex-column-description-div{
+                                        display: flex;
+                                        flex-direction: column;
+                                        row-gap: 10px;
+                                        margin-top: 35px;
+                                        justify-content: center;
+                                    }
+                                    
+                                    p{
+                                        font-size: 14px;
+                                    }
+
+                                    .ticket-number{
+                                        margin:0px;
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                .travel-info{
+                                    display: flex;
+                                    padding: 8px 0;
+                                    font-size: 12px;
+                                    text-align: center;
+                                    grid-gap: 0;
+                                  
+                                   
+
+                                    .departure,
+                                    .arrive{
+                                        
+                                    }
+                                }
+                            
+                            
+                                .email-mobile-info{
+                                  
+
+                                    .child-email-mobile-info{
+                                        
+                                    }
+                                   
+                                        p{   
+                                          
+                                        }
+                                
+                                    .email-div{
+                                        padding: 12px 4px;
+                                        font-size: 11px;
+
+                                        span{
+                                            display: block;
+                                        }
+                                    }
+
+                                    .mobile-div{
+                                        padding: 12px 5px;
+                                        font-size: 12px;
+                                    }
+                                }
+                            
+                                .payment-details-info{
+                                   
+
+                                    .cardHolder-p{
+                                        
+                                    }
+
+                                    .right-box{
+                                        
+
+                                        .border-div{
+                                          
+                                        }
+
+                                        .fullPrice-div-info{
+                                           
+                                        }
+                                    }
+                                }
+                            
+                            }
+                        }
+                    
+                        .seconde-box{
+                           
+
+                            .print-btn,
+                            .pdf-btn{
+                             
+
+                                .print-span,
+                                .pdf-span{
+                                  
+                                    
+                                    img{
+                                    
+                                    }
+                                }
+
+                                
+                            }
+
+                           
+                            .pdf-btn{
+                              
+                            }
+                        }
+                    
+                    }
+                }
+            }
+        
+        }
+    }
+}
+
+.contact-title-small{
+    font-size: 1em;
+}
+ 
+.passengers-title-p{
+    font-size: 1em;
+}
 }

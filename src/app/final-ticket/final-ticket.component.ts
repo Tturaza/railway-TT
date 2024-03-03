@@ -18,8 +18,7 @@ export class FinalTicketComponent implements OnInit {
    cardN = ""
    uniqueId:string = ""
   
-  constructor(){
-  }
+  constructor(){}
 
   ngOnInit(): void {
 
