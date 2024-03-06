@@ -13,6 +13,11 @@ button{
     display: none;
 }
 
+.for-media-q{
+    background-color: whitesmoke;
+    min-height: 100vh;
+}
+
 
 .search-whole-box{
     align-items: center;
@@ -34,4 +39,53 @@ button{
     background-color: #e53914;
     color: #ffffff;
     cursor:pointer;
+}
+
+
+@media screen and (min-width:375px) and (max-width:555px){
+    
+    .for-media-q{
+        padding: 0 !important;
+    }
+
+    .search-whole-box{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        row-gap: 10px;
+    }
+
+    .search-div{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 35px 35px 0px !important;
+      
+    }
+
+    .col-lg-2{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px !important;
+        margin: 0 !important;
+
+    }
+
+    .col-lg-10{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+
+    .btn-d{
+        margin-top: 10px;
+    }
+
+    .search-h1{
+        font-size: 25px;
+    }
 }
